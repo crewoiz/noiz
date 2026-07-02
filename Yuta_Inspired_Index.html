@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>@crew</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=IBM+Plex+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#06070b;--card:rgba(15,20,32,.82);--text:#eef4ff;--sub:#c4d4ef;--accent:#b7d4ff;}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'IBM Plex Mono',monospace;background:radial-gradient(circle at top,#18233a,#06070b 70%);color:var(--text);display:flex;justify-content:center;padding:40px;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;background-image:radial-gradient(circle,rgba(255,255,255,.25) 1px,transparent 1px);background-size:180px 180px;animation:float 50s linear infinite}
+@keyframes float{to{transform:translateY(-180px)}}
+.card{max-width:700px;width:100%;background:var(--card);border:1px solid rgba(255,255,255,.15);border-radius:22px;overflow:hidden;backdrop-filter:blur(14px);box-shadow:0 0 40px rgba(120,170,255,.18)}
+.banner{width:100%;height:220px;object-fit:cover;display:block;filter:brightness(.8)}
+.profile{margin-top:-70px;text-align:center;padding:0 30px 40px}
+.profile img{width:140px;height:140px;border-radius:50%;border:4px solid #fff;object-fit:cover}
+h1{font:600 3rem 'Cormorant Garamond',serif;margin-top:18px}
+.sub{color:var(--sub);margin-top:8px;line-height:1.7}
+details{margin:18px 30px;border:1px solid rgba(255,255,255,.18);border-radius:12px;background:rgba(255,255,255,.03)}
+summary{padding:14px;font-family:'Cormorant Garamond',serif;font-size:1.3rem;cursor:pointer}
+.details{padding:16px;border-top:1px solid rgba(255,255,255,.12);color:var(--sub);line-height:1.8}
+.music{text-align:center;padding:30px}
+.barwrap{display:flex;justify-content:center;gap:6px;height:55px;align-items:end;margin:18px 0}
+.bar{width:6px;height:10px;background:var(--accent);animation:bounce 1s infinite ease-in-out}
+.bar:nth-child(2){animation-delay:.1s}.bar:nth-child(3){animation-delay:.2s}.bar:nth-child(4){animation-delay:.3s}.bar:nth-child(5){animation-delay:.4s}
+@keyframes bounce{50%{height:45px}100%{height:10px}}
+button,a.btn{background:none;color:var(--text);border:1px solid rgba(255,255,255,.25);padding:12px 22px;border-radius:999px;text-decoration:none;cursor:pointer}
+footer{text-align:center;padding:25px;color:#aebbd5}
+</style>
+</head>
+<body>
+<div class="card">
+<img class="banner" src="banner.jpg" alt="Banner">
+<div class="profile">
+<img src="profile.jpg" alt="Profile">
+<h1>CREW</h1>
+<p class="sub">he/him • mexican • bi aroace</p>
+<p class="sub">A quiet corner inspired by Yuta Okkotsu.</p>
+</div>
+
+<details open><summary>ABOUT</summary><div class="details">Write your bio here.</div></details>
+<details><summary>INTERESTS</summary><div class="details">DRAMAtical Murder, Jujutsu Kaisen, Persona, Banana Fish...</div></details>
+<details><summary>COLLECTION</summary><div class="details">Figures, CDs, manga, acrylic stands, physical media.</div></details>
+<details><summary>LINKS</summary><div class="details"><a class="btn" href="https://myfigurecollection.net/">MyFigureCollection</a></div></details>
+
+<div class="music">
+<p>NOW PLAYING</p>
+<div class="barwrap"><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div></div>
+<button onclick="toggle()">PLAY / PAUSE</button>
+<audio id="audio" loop><source src="music.mp3" type="audio/mpeg"></audio>
+</div>
+
+<footer>“The things I love are worth protecting.”</footer>
+</div>
+<script>
+const a=document.getElementById('audio');
+function toggle(){a.paused?a.play():a.pause();}
+</script>
+</body>
+</html>
