@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Crew</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;500&family=IBM+Plex+Mono:wght@300;400&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#08090d;--fg:#eef2fa;--muted:#b8c0d6;--line:#2d3343;}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:"IBM Plex Mono",monospace;line-height:1.8}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.06;background:
+repeating-linear-gradient(0deg,transparent 0 3px,rgba(255,255,255,.18) 4px),
+radial-gradient(circle at 20% 30%,rgba(255,255,255,.12),transparent 30%);}
+.hero img{width:100%;height:48vh;object-fit:cover;display:block;filter:brightness(.7)}
+.wrap{max-width:760px;margin:auto;padding:0 24px}
+.avatar{width:120px;height:120px;border-radius:50%;border:3px solid #fff;margin:-60px auto 24px;display:block;background:#111;object-fit:cover}
+h1{font-family:"Noto Serif JP",serif;font-size:3.3rem;text-align:center;font-weight:500;margin:.2em 0}
+.small{text-align:center;color:var(--muted)}
+.quote{font-family:"Noto Serif JP",serif;font-size:1.4rem;text-align:center;margin:70px auto;color:#dfe7f7}
+section{padding:70px 0;border-top:1px solid var(--line)}
+h2{font-family:"Noto Serif JP",serif;font-weight:500;letter-spacing:2px}
+.gallery{display:grid;grid-template-columns:1fr;gap:16px}
+.panel{height:220px;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;color:#8f98ac}
+.links a{display:inline-block;margin:8px 12px 0 0;color:#eef2fa;text-decoration:none;border-bottom:1px solid #667}
+.player{padding:70px 0;text-align:center}
+.progress{height:2px;background:#394154;margin:18px auto;max-width:320px;position:relative}
+.progress:after{content:"";position:absolute;left:40%;top:-3px;width:8px;height:8px;border-radius:50%;background:#eef2fa}
+footer{text-align:center;color:#9ca5b8;padding:60px 0}
+</style>
+</head>
+<body>
+<div class="hero"><img src="banner.jpg" alt="Replace with your banner"></div>
+<div class="wrap">
+<img class="avatar" src="profile.jpg" alt="Replace profile">
+<h1>CREW</h1>
+<p class="small">he/him • mexican • bi aroace</p>
+<p class="quote">“Love is the most twisted curse of all.”</p>
+
+<section>
+<h2>ABOUT</h2>
+<p>Write a few paragraphs here instead of hiding everything behind dropdowns. Let the page feel like a quiet journal.</p>
+</section>
+
+<section>
+<h2>INTERESTS</h2>
+<p>DRAMAtical Murder • Jujutsu Kaisen • Banana Fish • Persona • Promare • Physical media • Figures • BL</p>
+</section>
+
+<section>
+<h2>COLLECTION</h2>
+<div class="gallery">
+<div class="panel">Photo Placeholder</div>
+<div class="panel">Photo Placeholder</div>
+<div class="panel">Photo Placeholder</div>
+</div>
+</section>
+
+<section class="links">
+<h2>LINKS</h2>
+<a href="#">MyFigureCollection</a>
+<a href="#">AniList</a>
+<a href="#">Twitter</a>
+</section>
+
+<div class="player">
+<h2>NOW PLAYING</h2>
+<p>Dramatique</p>
+<div class="progress"></div>
+<p>▶︎</p>
+<audio controls style="width:100%;max-width:360px">
+<source src="music.mp3" type="audio/mpeg">
+</audio>
+</div>
+
+<footer>またね。</footer>
+</div>
+</body>
+</html>
